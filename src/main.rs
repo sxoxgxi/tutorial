@@ -1,9 +1,41 @@
 use std::io;
 
 fn main() {
-    let mut input = String::new();
-    io::stdin().read_line(&mut input).expect("failed to read line");
-    println!("{}", input);
+
+    // string conversion to integers
+    let mut string_age = String::new();
+    io::stdin().read_line(&mut string_age).expect("Error reading the line");
+    let int_age: i64 = string_age.trim().parse().unwrap();
+    println!("string age: {}", string_age);
+    println!("int age adding 1: {}", int_age + 1);
+
+    // integers type casting and conversion
+    let x = 34.0f32; // let x = 34.0_f32
+    let y = 35.0f32; 
+    println!("Addition: {}", x + y);    
+   
+    let a = 34_000 as i64;
+    let b = 10_i64; 
+    println!("Multiplication: {}", a * b);    
+   
+    let c = 30_i64;
+    let d = 3_i32; 
+    println!("Division: {}", c / (d as i64)); 
+
+    let x: u8 = 5; // 0 - 255
+    let y: i8 = 10; // -128 - 127
+
+    let z = x + y; 
+    println!("{}", z); // Err: cannot add u8 with i8
+
+    // user input
+    // let mut input = String::new();
+    // io::stdin().read_line(&mut input).expect("failed to read line");
+    // println!("{}", input);
+
+    // let mut nirmal = String::new();
+    // io::stdin().read_line(&mut nirmal).expect("failed to read the line");
+    // println!("meow {}", nirmal);
 
     // integers
     // let x: i32 = 56;
